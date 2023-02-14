@@ -1,1 +1,82 @@
 /* You can add global styles to this file, and also import other style files */
+
+.icons-header{
+    display: flex; 
+    column-gap: 20px; 
+    font-size: 2em; 
+    color: green;
+}
+
+.card-body {
+    padding-top: 0
+}
+
+.portrait-container {
+    position: relative;
+    margin-top: -200px;
+    width: auto;
+}
+
+.portrait{
+    border-image: 0;
+    border-radius: 100%;
+}
+
+.btn-portrait {
+    position: absolute;
+    bottom: 0;
+}
+
+.item-list {
+    list-style: none;
+}
+
+.list-info {
+    display: flex;
+    color:black;
+    text-decoration: none !important;
+    width: 100% !important;
+}
+
+.logo-image{
+    width: 5rem;
+}
+
+.btn-right{
+    display: flex;
+    align-self: flex-end;
+}
+
+.fa-button,.fa {
+    color: black;
+    display: flex;
+    height: 2.4rem;
+    width: 2.4rem;
+    line-height: 2.4rem;
+    text-align: center;
+    border-radius: 50%;
+    background: white;
+    padding-top: 25%;
+}
+
+.fa-button:hover,.fa:hover {
+    background: gray;
+}
+
+.btn-edit{
+    display: inline-flex;
+    align-self: flex-end;
+    width: auto;
+}
+
+.data-control {
+    display: flex !important;
+    align-self: baseline;
+    padding-left: 2rem;
+}
+
+.data-container {
+    display: flex;
+}
+
+

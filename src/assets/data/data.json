@@ -1,0 +1,69 @@
+{
+	"name": "Mauro Dietze",
+	"backImage": "https://informaticarobledo.com.ar/wp-content/uploads/2018/09/Informatica_Banner-2000x512.jpg",
+	"image": "http:// ",
+	"position": "Web Developer",
+	"company": {
+		"name": "CONICET",
+		"img": "http://",
+		"url": "#"
+	},
+	"school": {
+		"name": "CONICET",
+		"img": "http://",
+		"url": "#"
+	},
+	"ubication": "Buenos Aires (Argentina)",
+	"about": "Apasionado por la tecnología con gran motivación para seguir aprendiendo habilidades y crecer profesionalmente. Confío plenamente en mi capacidad de resolver problemas cada vez mas complejos con mejores resultados. Mi objetivo laboral es crecer como profesional en desarrollo de software y si es posible aprender las nuevas tecnologías lideres en el mercado.",
+	"experience": [{
+		"position": "Backend Developer",
+		"img": "https://global-uploads.webflow.com/5e157547d6f791d34ea4e2bf/6087f2b060c7a92408bac811_logo.svg",
+		"mode": "Jornada Completa",
+		"company": "Webflow",
+		"start": "mar 2019",
+		"end": "actualidad",
+		"timeElapsed": "2 años y 6 meses"
+	}],
+	"education": [{
+		"school": "UTN",
+		"title": "Argentina Programa",
+		"img": "https://utn.edu.ar/images/logo-utn.png",
+		"career": "Web Developer - FullStack",
+		"score": 82,
+		"start": "2022",
+		"end": "2023"
+	},
+	{
+		"school": "ENSAM",
+		"title": "Bachillerato en Cs. Naturales",
+		"img": "https://isfd102-bue.infd.edu.ar/sitio/wp-content/uploads/2018/08/escudo-nuevo-ensama-1.jpg",
+		"career": "",
+		"score": 78,
+		"start": "2006",
+		"end": "2009"
+	}],
+	"aptitudes": [{
+			"name": "Resolución de problemas",
+			"progress": 75,
+			"confirms": 2,
+			"confirmsNames": [{
+				"name": "Nikolai Emmanuel"
+			}]
+		},
+		{
+			"name": "Diseño de Sistemas",
+			"progress": 65,
+			"confirms": 3,
+			"confirmsNames": [{
+				"name": "Nikolai Emmanuel"
+			}]
+		}
+	],
+	"achivements": [{
+			"name": "Haru App"
+		},
+		{
+			"name": "Lanterns 19/09"
+		}
+	]
+}
