@@ -1,26 +1,25 @@
 <div class="card mb-2">
-    <img class="card-img-top" alt="image" [src]="miPortfolio.backImage"/>
+    <img class="card-img-top" alt="image" [src]="person.image_background_header"/>
     <div class="card-body">
     <div>
         <div class="col-2">
         <div class="portrait-container">
-            <img class="img-fluid portrait" alt="portrait" src="../assets/static/portrait/Primer Plano.png">
-            <a href="#" class="btn-portrait"><i class="fa fa-pen"></i></a>
+            <img class="img-fluid portrait" alt="portrait" [src]="person.url_image">
+            <a *ngIf="currentUser" data-bs-toggle="modal" data-bs-target="#persInfoModal" class="btn-portrait"><i class="fa fa-pen"></i></a>
         </div>
         </div>
     </div>
-
     <div class="row p-2">
-        <h3>{{miPortfolio.name}}</h3>
-        <p>{{miPortfolio.position}}</p>
+        <h3>{{person.firstname + " " + person.lastname}}</h3>
+        <p>{{person.ocupation}}</p>
         <div class="row">
-        <div>{{miPortfolio.ubication}}</div>
-        <a href="#" class="link-primary"> Informacion de contacto</a>
+        <div>{{person.address}}</div>
+            <a href="#" class="link-primary"> Informacion de contacto</a>
         </div>
         <div class="row-cols-6">
-        <button type="button" class="btn btn-outline-primary w-auto m-1">Tengo interés en</button>
-        <button type="button" class="btn btn-outline-primary w-auto m-1">Añadir sección</button>
-        <button type="button" class="btn btn-outline-primary w-auto m-1">Más</button>
+            <button type="button" class="btn btn-outline-primary w-auto m-1">Tengo interés en</button>
+            <button type="button" class="btn btn-outline-primary w-auto m-1">Añadir sección</button>
+            <button type="button" class="btn btn-outline-primary w-auto m-1">Más</button>
         </div>
     </div>
     </div>

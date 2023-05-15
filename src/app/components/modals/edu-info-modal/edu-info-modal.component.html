@@ -1,0 +1,46 @@
+<div class="modal fade bd-example-modal-lg" id="eduInfoModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ModalLabel">Educación</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form  *ngIf="education" [formGroup]="form" (ngSubmit)="onSubmit($event)">
+                    <div class="form-group">
+                        <label for="school" class="col-form-label">Instituto:</label>
+                        <input type="text" [(ngModel)]="education.school" class="form-control" formControlName="school" id="school">
+                    </div>
+                    <div class="form-group">
+                        <label for="title" class="col-form-label">Título:</label>
+                        <input type="text" [(ngModel)]="education.title" class="form-control" formControlName="title" id="title">
+                    </div>
+                    <div class="form-group">
+                        <label for="img" class="col-form-label">Link del logo del instituto:</label>
+                        <input type="text" [(ngModel)]="education.img" class="form-control" formControlName="img" id="img">
+                    </div>
+                    <div class="form-group">
+                        <label for="career" class="col-form-label">Carrera:</label>
+                        <input type="text" [(ngModel)]="education.career" class="form-control" formControlName="career" id="career">
+                    </div>
+                    <div class="form-group">
+                        <label for="score" class="col-form-label">Promedio:</label>
+                        <input type="number" [(ngModel)]="education.score" class="form-control" formControlName="score" id="score">
+                    </div>
+                    <div class="form-group">
+                        <label for="start" class="col-form-label">comienzo:</label>
+                        <input  type="number" min="1900" max="2099" [(ngModel)]="education.start" class="form-control" formControlName="start" id="start">
+                    </div>
+                    <div class="form-group">
+                        <label for="end" class="col-form-label">finalización:</label>
+                        <input type="number" min="1900" max="2099"  [(ngModel)]="education.end" class="form-control" formControlName="end" id="end">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

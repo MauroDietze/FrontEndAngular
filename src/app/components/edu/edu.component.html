@@ -1,0 +1,46 @@
+<div class="card mb-2">
+    <div class="card-body">
+      <div id="Education" class="row">
+        <div class="card-titles">
+          <div class="row">
+            <div class="col">
+              <h3>Educación</h3>
+            </div>
+            <div class="col-1 w-auto end-0">
+              <a *ngIf="currentUser" data-bs-toggle="modal" data-bs-target="#eduInfoModal" ><i class="bi bi-plus h4"></i></a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="item-list">
+            <li *ngFor="let education of educationList">
+              <div class="data-container">
+                <a class="list-info" href="#">
+                  <div>
+                    <img
+                      class="logo-image"
+                      [src]="education.img"
+                    />
+                  </div>
+                  <div class="data-control row">
+                    <div class="w-auto end-0">
+                      <h3 >{{education.school}}</h3>
+                    </div>
+                    <p>{{education.title}}</p>
+                    <p>{{education.career}}</p>
+                    <p><time>{{education.start}}</time> - <time>{{education.end}}</time></p>
+                  </div>
+                </a>
+                <div class="data-control">
+                  <div class="btn-edit">
+                    <a *ngIf="currentUser" data-bs-toggle="modal" data-bs-target="#eduInfoModal" (click)="passEdu(education)" class="btn-right"><i class="fa fa-pen"></i></a>
+                    <a *ngIf="currentUser" (click)="deleteEdu(education)" class="btn-right"><i class="fa fa-trash"></i></a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

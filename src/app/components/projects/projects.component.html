@@ -1,0 +1,42 @@
+<div class="card mb-2">
+    <div class="card-body">
+      <div id="Experiencia" class="row">
+        <div class="card-titles">
+          <div class="row">
+            <div class="col">
+              <h3>Proyectos</h3>
+            </div>
+            <div class="col-1 w-auto data-control">
+              <div class="btn-edit">
+                <a *ngIf="currentUser" data-bs-toggle="modal" data-bs-target="#proInfoModal" class="btn-right"><i class="bi bi-plus h4"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="item-list">
+            <li *ngFor="let project of projectsList">
+              <div class="data-container">
+                <a class="list-info" href="#">
+                  <div class="data-control row">
+                    <div class="w-auto end-0">
+                      <h3 >{{project.name}}</h3>
+                    </div>
+                    <p>{{project.description}}</p>
+                    <p>Año: {{project.date}}</p>
+                    <!-- <link href="{{project.link}}">{{project.link}} -->
+                  </div>
+                </a>
+                <div class="data-control">
+                  <div class="btn-edit">
+                    <a *ngIf="currentUser" data-bs-toggle="modal" data-bs-target="#proInfoModal" (click)="passPro(project)" class="btn-right"><i class="fa fa-pen"></i></a>
+                    <a *ngIf="currentUser" (click)="deletePro(project)" class="btn-right"><i class="fa fa-trash"></i></a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

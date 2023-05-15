@@ -79,4 +79,15 @@
     display: flex;
 }
 
+.modal-content {
+    margin: 2px auto;
+    z-index: 1100 !important;
+}
+
+.bi-plus:hover {
+    background-color: gray;
+    border-radius: 100%;
+    width: auto;
+  }
+
 

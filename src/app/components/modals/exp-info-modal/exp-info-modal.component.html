@@ -1,0 +1,46 @@
+<div class="modal fade bd-example-modal-lg" id="expInfoModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ModalLabel">Experiencia laboral</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form *ngIf="experience" [formGroup]="form" (ngSubmit)="onSubmit($event)">
+                    <div class="form-group">
+                        <label for="company" class="col-form-label">Companía:</label>
+                        <input type="text" [(ngModel)]="experience.company" class="form-control" formControlName="company" id="company">
+                    </div>
+                    <div class="form-group">
+                        <label for="position" class="col-form-label">Posición:</label>
+                        <input type="text" [(ngModel)]="experience.position" class="form-control" formControlName="position" id="position">
+                    </div>
+                    <div class="form-group">
+                        <label for="description" class="col-form-label">Descripción de tus tareas:</label>
+                        <textarea type="text" [(ngModel)]="experience.description" class="form-control" formControlName="description" id="description"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="job_type" class="col-form-label">Modalidad:</label>
+                        <input type="text" [(ngModel)]="experience.job_type" class="form-control" formControlName="job_type" id="job_type">
+                    </div>
+                    <div class="form-group">
+                        <label for="image" class="col-form-label">link del lógo de la companía:</label>
+                        <input type="text" [(ngModel)]="experience.image" class="form-control" formControlName="image" id="image">
+                    </div>
+                    <div class="form-group">
+                        <label for="start" class="col-form-label">comienzo:</label>
+                        <input type="number" [(ngModel)]="experience.start" min="1900" max="2099" class="form-control" formControlName="start" id="start">
+                    </div>
+                    <div class="form-group">
+                        <label for="end" class="col-form-label">finalización:</label>
+                        <input type="number" [(ngModel)]="experience.end" min="1900" max="2099" class="form-control" formControlName="end" id="end">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button href="#" type="submit" class="btn btn-primary" data-bs-dismiss="modal">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

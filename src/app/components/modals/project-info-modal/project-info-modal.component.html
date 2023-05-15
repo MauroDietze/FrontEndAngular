@@ -1,0 +1,34 @@
+<div class="modal fade bd-example-modal-lg" id="proInfoModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ModalLabel">Proyectos</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form *ngIf="project" [formGroup]="form" (ngSubmit)="onSubmit($event)">
+                    <div class="form-group">
+                        <label for="name" class="col-form-label">Título:</label>
+                        <input type="text" [(ngModel)]="project.name" class="form-control" formControlName="name" id="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="description" class="col-form-label">Descripción:</label>
+                        <textarea type="text" [(ngModel)]="project.description" class="form-control" formControlName="description" id="description"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="date" class="col-form-label">Año:</label>
+                        <input type="number" [(ngModel)]="project.date" min="1900" max="2099" class="form-control" formControlName="date" id="date">
+                    </div>
+                    <div class="form-group">
+                        <label for="link" class="col-form-label">link:</label>
+                        <input type="text" [(ngModel)]="project.link" class="form-control" formControlName="link" id="link">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button href="#" type="submit" class="btn btn-primary" data-bs-dismiss="modal">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

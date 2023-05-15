@@ -1,13 +1,16 @@
 <header>
-    <nav class="navbar navbar-dark bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Portfolio de {{miPortfolio.name}}</a>
-          <span class="icons-header">
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-square-facebook"></i>
-            <i class="fa-brands fa-twitter"></i>
-            <button class="btn btn-outline-success" type="button">Login</button>
-          </span>
-      </div>
-    </nav>
-  </header>
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Portfolio de {{person.firstname}}</a>
+        <span class="icons-header">
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-square-facebook"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <!-- Button trigger modal -->
+          <button *ngIf="!isLoggedIn()" data-bs-toggle="modal" data-bs-target="#loginModal" class="btn btn-outline-success" type="button">Iniciar sesión</button>
+          <button *ngIf="isLoggedIn()" (click)="logout()" class="btn btn-outline-success" type="button" data-bs-toggle="modal">Cerrar sesión</button>
+        </span>
+    </div>
+  </nav>
+  
+</header>

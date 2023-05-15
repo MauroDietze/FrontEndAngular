@@ -1,0 +1,62 @@
+<div class="modal fade bd-example-modal-lg" id="persInfoModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="ModalLabel">Modificar Datos Personales</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form  [formGroup]="form" (ngSubmit)="onSubmit($event)">
+                <div class="form-group">
+                    <label for="firstname" class="col-form-label">Nombre:</label>
+                    <input type="text" class="form-control" formControlName="firstname" id="firstname">
+                </div>
+                <div class="form-group">
+                    <label for="lastname" class="col-form-label">Apellido:</label>
+                    <input type="text" class="form-control" formControlName="lastname" id="lastname">
+                </div>
+                <div class="form-group">
+                  <label for="address" class="col-form-label">Lugar de Recidencia:</label>
+                  <input type="text" class="form-control" formControlName="address" id="address">
+                </div>
+                <div class="form-group">
+                    <label for="birthdate" class="col-form-label">Fecha de Nacimiento:</label>
+                    <input type="date" class="form-control" formControlName="birthdate" id="birthdate">
+                </div>
+                <div class="form-group">
+                    <label for="nationality" class="col-form-label">Nacionalidad:</label>
+                    <input type="text" class="form-control" formControlName="nationality" id="nationality">
+                </div>
+                <div class="form-group">
+                    <label for="phone" class="col-form-label">Teléfono:</label>
+                    <input type="number" class="form-control" formControlName="phone" id="phone">
+                </div>
+                <div class="form-group">
+                    <label for="email" class="col-form-label">email:</label>
+                    <input type="email" class="form-control" formControlName="email" id="email">
+                </div>
+                <div class="form-group">
+                    <label for="ocupation" class="col-form-label">Ocupación:</label>
+                    <input type="text" class="form-control" formControlName="ocupation" id="ocupation">
+                </div>
+                <div class="form-group">
+                    <label for="about_me" class="col-form-label">Sobre mi:</label>
+                    <textarea class="form-control" formControlName="about_me" id="about_me"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="url_image" class="col-form-label">Link de la foto de perfil:</label>
+                    <input type="text" class="form-control" formControlName="url_image" id="url_image">
+                </div>
+                <div class="form-group">
+                    <label for="image_background_header" class="col-form-label">Link de la imagen de fondo:</label>
+                    <input type="text" class="form-control" formControlName="image_background_header" id="image_background_header">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button href="#" type="submit" class="btn btn-primary" data-bs-dismiss="modal">Enviar</button>
+                </div>
+            </form>
+          </div>
+        </div>
+    </div>
+</div>

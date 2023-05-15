@@ -1,0 +1,70 @@
+<div class="card mb-2">
+  <div class="card-body">
+    <div id="Skill" class="row">
+      <div class="card-titles">
+        <div class="row">
+          <div class="col">
+            <h3>Skills</h3>
+          </div>
+        </div>
+      </div>
+      <div class="row card-body">
+        <div class="m-2 col card">
+          <div class="row">
+            <h3 class="col modal-title" id="ModalLabel">Soft Skills</h3>
+            <div class="col-1 btn-edit"><a *ngIf="currentUser" data-bs-toggle="modal" data-bs-target="#skillInfoModal"  (click)="passSkill(softSkill)" class="btn-right"><i class="bi bi-plus h4"></i></a></div>
+          </div>
+          <div class="item-list mb-3">
+            <li *ngFor="let skill of skillsSList">
+              <div class="row w-full m-2">
+                <div class="col w-full">
+                  <div class="data-control row w-full">
+                    <div class=" end-0">
+                      <h3>{{skill.name}}</h3>
+                    </div>
+                    <div class="m-3">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-1 w-auto">
+                  <div class="btn-edit">
+                    <a *ngIf="currentUser" data-bs-toggle="modal" data-bs-target="#skillInfoModal" (click)="passSkill(skill)" class="btn-right"><i class="fa fa-pen"></i></a>
+                    <a *ngIf="currentUser" (click)="deleteSkill(skill)" class="btn-right"><i class="fa fa-trash"></i></a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </div>
+        </div>
+        <div class="m-2 col card">
+          <div class="row">
+            <h3 class="col modal-title" id="ModalLabel">Hard Skills</h3>
+            <div class="col-1 btn-edit"><a *ngIf="currentUser" data-bs-toggle="modal" data-bs-target="#skillInfoModal" (click)="passSkill(hardSkill)" class="btn-right"><i class="bi bi-plus h4"></i></a></div>
+          </div>
+          <div class="item-list mb-3">
+            <li *ngFor="let skill of skillsHList">
+              <div class="row w-full m-2">
+                <div class="col w-full">
+                  <div class="data-control row w-full">
+                    <div class=" end-0">
+                      <h3>{{skill.name}}</h3>
+                    </div>
+                    <div class="progress p-0" role="progressbar" aria-label="Basic example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                      <div class="progress-bar" [style.width]="skill.progress + '%' ">{{skill.progress}}%</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-1 w-auto">
+                  <div class="btn-edit">
+                    <a *ngIf="currentUser" data-bs-toggle="modal" data-bs-target="#skillInfoModal" (click)="passSkill(skill)" class="btn-right"><i class="fa fa-pen"></i></a>
+                    <a *ngIf="currentUser" (click)="deleteSkill(skill)" class="btn-right"><i class="fa fa-trash"></i></a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
