@@ -26,7 +26,6 @@ export class PersInfoModalComponent {
   
   onSubmit(event:Event) {
     event.preventDefault;
-    console.log("Data: ", this.form.value);
     this.datosPortfolio.modifyPerson(this.form.value).subscribe(data => {
     this.router.navigate(['/portfolio']);
     })

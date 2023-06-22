@@ -7,8 +7,12 @@ import { BehaviorSubject, Observable, map } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthenticationService {
-  loginUrl="http://localhost:9004/api/auth/login";
-  logoutUrl="http://localhost:9004/api/user/logout";
+  // loginUrl="http://localhost:9004/api/auth/login";
+  // logoutUrl="http://localhost:9004/api/user/logout";
+  loginUrl = "https://portfolio-service-nxbo.onrender.com/api/auth/login";
+  logoutUrl = "https://portfolio-service-nxbo.onrender.com/api/auth/logout";
+  // loginUrl="http://181.46.20.14:8080/api/auth/login";
+  // logoutUrl="http://181.46.20.14:8080/api/user/logout";
   currentUserSubject: BehaviorSubject<any>;
 
   constructor(private http:HttpClient) { 

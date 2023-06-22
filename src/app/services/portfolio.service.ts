@@ -6,7 +6,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class PortfolioService {
-  url:String="http://localhost:9004";
+  //url:String="http://181.46.20.14:8080";
+  url:String="https://portfolio-service-nxbo.onrender.com";
+  // url:String="http://localhost:9004";
   constructor(private http:HttpClient) { }
 
   //---- Person ----//
